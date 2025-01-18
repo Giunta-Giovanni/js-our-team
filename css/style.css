@@ -3,10 +3,32 @@
     font-weight: 400;
     font-style: normal;
   } */
+/* 
+[class*="row"] {
+    background-color: rgba(171, 144, 144, 0.598); 
+    border: 1px dashed red;
+}
+
+Stile generico per tutte le colonne
+[class*="col"] {
+    background-color: rgba(14, 41, 196, 0.392); 
+    border: 1px dashed rgb(14, 97, 170); 
+} */
 
 body{
     background-color: black;
+}
+
+h1{
     font-family: "Itim", serif;
     font-weight: bold;
-    font-style: normal;
+    font-size: 50px;
+    color: #e73f79;
+}
+
+
+.image-fit {
+    height: 100%; /* Riempie l'altezza della colonna */
+    object-fit: cover; /* Garantisce che l'immagine riempia il contenitore senza deformarsi */
+    object-position: center; /* Centra l'immagine */
 }

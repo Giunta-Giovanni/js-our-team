@@ -42,26 +42,37 @@ const teamMembers = [
 ];
 
 // Gestione del Dom
-const cards = document.getElementById('card-section')
-console.log(cards);
+const cards = document.getElementById('card-section') //richiamo sezione card
 
-
-//mi creo una variabile items che poi dovro riempire con codice html da stampare
-let items = ``;
+//variabile items vuota da riempire
+let items = ''
 
 // ciclo su team Members
 for(let i = 0; i < teamMembers.length; i++){
   // mi ricavo l'elementoiesimo
   const member = teamMembers[i];
+
   console.log(member);
   
-  // mi salvo ogni proprietà di member con la proprietà destructuring
-  const {name, role, email, img} = member;
+  // aggiorno il valore di items
+  items += generatemembercard(member);
+}
+console.log(items);
+
+// stampo dati in uscita in html
+cards.innerHTML = items
+
+
+// FUNCTION
+//funzione per generare singola menmber card
+function generatemembercard(membObj){
   
+  // mi salvo ogni proprietà di membObj con la proprietà destructuring
+  const {name, role, email, img} = membObj;
+  
+  //ritorno il codice html con le proprietà nelle relative posizioni
 
-    //ad ogni ciclo svolto aggiungo le proprieta degli elementi al posto giusto
-
-  items += `
+   return `
                 <!-- Card -->
                 <div  class="col-sm-12 col-md-6 col-lg-4">
                     <!-- Riga con immagine e descrizione -->
@@ -82,11 +93,3 @@ for(let i = 0; i < teamMembers.length; i++){
                 </div>
                 `;
 }
-
-console.log(items);
-
-// stampo dati in uscita in html
-
-cards.innerHTML = items
-
-

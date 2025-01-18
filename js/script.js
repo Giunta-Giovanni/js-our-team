@@ -41,7 +41,6 @@ const teamMembers = [
   }
 ];
 
-
 // Gestione del Dom
 const cards = document.getElementById('card-section')
 console.log(cards);
@@ -85,7 +84,6 @@ for(let i = 0; i < teamMembers.length; i++){
 }
 
 console.log(items);
-
 
 // stampo dati in uscita in html
 

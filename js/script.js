@@ -1,3 +1,6 @@
+// Dato un array di oggetti rappresentante un team di un’azienda, creare una pagina dedicata in cui mostrare una card per ciascun componente.
+// Bonus: Rendere l’esercizio responsive, mandando a capo le card
+
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -37,5 +40,12 @@ const teamMembers = [
   }
 ];
 
+// ho un array di oggetti
+// creo un ciclo for per ricavarmi i singoli oggetti
 
-console.log('ciao');
+    // mi salvo le singole proprieta degli oggetti
+    // mi creo una variabile items che poi dovro riempire con codice html da stampare
+    // all'interno della variabile ad ogni ciclo svolto aggiungo le proprieta degli elementi al posto giusto
+// mi devo stampare i dati in uscita nell'file hatml
+
+

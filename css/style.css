@@ -28,7 +28,8 @@ h1{
 
 
 .image-fit {
-    height: 100%; /* Riempie l'altezza della colonna */
+    height: 100%;
+    max-width: 100%;
     object-fit: cover; /* Garantisce che l'immagine riempia il contenitore senza deformarsi */
     object-position: center; /* Centra l'immagine */
 }

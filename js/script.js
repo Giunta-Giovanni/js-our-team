@@ -1,6 +1,7 @@
 // Dato un array di oggetti rappresentante un team di un’azienda, creare una pagina dedicata in cui mostrare una card per ciascun componente.
 // Bonus: Rendere l’esercizio responsive, mandando a capo le card
 
+// ho un array di oggetti
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -40,12 +41,54 @@ const teamMembers = [
   }
 ];
 
-// ho un array di oggetti
-// creo un ciclo for per ricavarmi i singoli oggetti
 
-    // mi salvo le singole proprieta degli oggetti
-    // mi creo una variabile items che poi dovro riempire con codice html da stampare
-    // all'interno della variabile ad ogni ciclo svolto aggiungo le proprieta degli elementi al posto giusto
-// mi devo stampare i dati in uscita nell'file hatml
+// Gestione del Dom
+const cards = document.getElementById('card-section')
+console.log(cards);
+
+
+//mi creo una variabile items che poi dovro riempire con codice html da stampare
+let items = ``;
+
+// ciclo su team Members
+for(let i = 0; i < teamMembers.length; i++){
+  // mi ricavo l'elementoiesimo
+  const member = teamMembers[i];
+  console.log(member);
+  
+  // mi salvo ogni proprietà di member con la proprietà destructuring
+  const {name, role, email, img} = member;
+  
+
+    //ad ogni ciclo svolto aggiungo le proprieta degli elementi al posto giusto
+
+  items += `
+                <!-- Card -->
+                <div  class="col-sm-12 col-md-6 col-lg-4">
+                    <!-- Riga con immagine e descrizione -->
+                    <div class="row">
+
+                        <!-- Colonna immagine -->
+                        <div class="col-3 p-0 ">
+                            <img class="image-fit "src="./${img}">
+                        </div>
+
+                        <!-- Colonna descrizione -->
+                        <div class="col-9 py-1 px-3 text-start bg-black text-light">
+                            <h2>${name}</h2>
+                            <p>${role}</p>
+                            <a href="#" class="text-light">${email}</a>
+                        </div>
+                    </div>
+                </div>
+                `;
+}
+
+console.log(items);
+
+
+// stampo dati in uscita in html
+
+cards.innerHTML = items
 
 
